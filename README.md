@@ -1,7 +1,7 @@
 # 🏎️ Autonomous Highway Driving with Deep Q-Learning
 
 ## Members
-Alperen Sari - 2103320
+Alperen Sari - 2103320 
 Enes Burak Çetin - 
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
@@ -18,9 +18,10 @@ Below is the progression of the agent from random actions to fully autonomous dr
 * **Center:** Half-Trained Agent (Safe but Slow)
 * **Right:** Fully Trained Agent (High Speed & Overtaking)
 
-[VIDEO GELECEK YER - Videoyu Editör Modunda Buraya Sürükle]
-
----
+-----
+Video
+https://github.com/user-attachments/assets/08a3bbd0-c82a-481b-9269-3dd3b3600534
+-----
 
 ## 📐 Methodology
 
@@ -58,13 +59,16 @@ I used **Deep Q-Network (DQN)** implemented via `Stable-Baselines3`. DQN was cho
 ### Reward vs. Episodes
 The following graph demonstrates the learning curve over the training period.
 
-![Training Graph]([Grafik Resmini Buraya Sürükle veya Linkini Yapıştır])
+-----
+Training Graph
+<img width="1000" height="500" alt="training_graph" src="https://github.com/user-attachments/assets/06c745ce-11a6-4463-be15-0b7b177de758" />
+-----
 
 ### The Commentary
 * **Phase 1 (Episodes 0-100):** The agent exhibits high exploration (Epsilon-greedy strategy). Rewards are low and volatile as the car frequently crashes while testing random actions.
 * **Phase 2 (Episodes 100-300):** A sharp rise in the trend line. The agent learns that `collision = negative reward` and begins to prioritize staying in lanes. However, it often gets stuck behind slow cars.
 * **Phase 3 (Convergence):** The agent masters the concept of "overtaking". It learns to change lanes to maintain $v_{max}$. The reward stabilizes at a high value, indicating consistent high-speed driving without crashing.
-* **Emergency Brake**??????
+* **Emergency Brake**
 Emergency Braking Behavior: While observing the fully trained agent, we notice distinct instances where the car decelerates rapidly (appearing to move backward relative to traffic flow). This is an emergent behavior where the agent learns to prioritize safety over speed in bottleneck situations. Instead of attempting risky overtakes that would lead to collisions, the agent chooses to brake, effectively minimizing the penalty function.
 
 ---
@@ -95,4 +99,5 @@ pip install -r requirements.txt
 python train.py
 
 # 4. Generate the Evolution Video
+
 python evolution_video.py
