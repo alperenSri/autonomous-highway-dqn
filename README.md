@@ -2,7 +2,7 @@
 
 ## Members
 Alperen Sari - 2103320 
-Enes Burak Çetin - 
+Enes Burak Çetin - 2104091
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
 ![Library](https://img.shields.io/badge/Gymnasium-Highway--Env-green?style=for-the-badge)
@@ -101,3 +101,4 @@ python train.py
 # 4. Generate the Evolution Video
 
 python evolution_video.py
+
